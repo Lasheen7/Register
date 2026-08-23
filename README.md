@@ -1,21 +1,23 @@
-# Future Mall Cashier System
+# Cashier System
 
-A command-line grocery store system built in Python for Hack Club's Stardance. 
+A terminal-based cashier system built in Python. Supports product selection, 
+quantity input, validation, discount calculation, and ASCII receipt generation.
 
-Most terminal calculators just instantly dump text on the screen, so I built this to feel more like an actual interaction. It uses delayed printing to pace the text, handles input errors gracefully, and generates a formatted receipt at the end.
+## Demo
+[Link to your video, or embed the GIF/screenshot]
 
-## How it works
+## How to Run
+1. Clone this repo
+2. Run `python Register.py`
+3. Follow the prompts in terminal
 
-- **Forgiving inputs:** The script cleans up user inputs with `.lower().strip()`, so if you accidentally type " RICE " or "Chicken", the program won't break.
-- **Dynamic cart:** Keeps a running total of your items and calculates prices based on quantity.
-- **Automatic discounts:** If the final total hits 700 EGP or more, a 15% discount is automatically applied before checkout.
-- **ASCII checkout:** Uses nested f-strings to generate a perfectly aligned receipt box with exactly 2-decimal precision for the price.
+## Features
+- 7 products (rice, chicken, sugar, meat, salt, fish, potato)
+- Case-insensitive product input with validation
+- Quantity input in kgs
+- 15% automatic discount on total
+- ASCII receipt output in EGP
 
-## Running it locally
-
-You just need Python installed. Clone the repo and run the file:
-
-```bash
-git clone [https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git](https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git)
-cd YOUR-REPO-NAME
-python cashier.py
+## Tech
+- Python 3
+- No external libraries needed
