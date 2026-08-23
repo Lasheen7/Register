@@ -1,18 +1,18 @@
 import time
 
-Products = ["rice", "chicken", "sugar", "meat", "salt"]
-Prices = [35, 150, 40, 500, 10]
+Products = ["rice", "chicken", "sugar", "meat", "salt", "fish", "potato"]   
+Prices = [35, 150, 40, 500, 10, 150, 30]
 
 
-def print_delay(message, period=1.5):
+def print_delay(message, period=1.5):        # A function for organized and delayed printing
     print(message)
     time.sleep(period)
 
 
-def choose_product():
+def choose_product():                # A function the enables users to choose products
     product = ''
     while True:
-        product = input()
+        product = input().lower().strip()       # Enables the user to enter in both lowercase and uppercase
         if product in Products:
             break
         else:
@@ -20,9 +20,9 @@ def choose_product():
     return product
 
 
-def quant_choice():
+def quant_choice():                  # A function the enables users to choose the quantity of their products
     quant = ''
-    Q = [str(z) for z in range(1, 101)]
+    Q = [str(z) for z in range(1, 101)]              #Only choose whole numbers for the quantity
     print_delay("How much Kgs do you need, Sir ?")
     while True:
         quant = input()
@@ -34,11 +34,11 @@ def quant_choice():
     return quant
 
 
-def y_n_ans():
+def y_n_ans():                     # A function for yes or no answer validation
     ans = ''
     Answer = ["yes", "no"]
     while True:
-        ans = input()
+        ans = input().lower().strip()
         if ans in Answer:
             break
         else:
@@ -46,7 +46,7 @@ def y_n_ans():
     return ans
 
 
-def receipt(Price):
+def receipt(Price):                 # A function for printing and designing the receipt
     print("╔═════════════════════════════════════════╗")
     print("║         𝙁 𝙪 𝙩 𝙪 𝙧 𝙚  𝙈 𝙖 𝙡 𝙡            ║")
     print("║=========================================║")
@@ -58,7 +58,7 @@ def receipt(Price):
     print("╚═════════════════════════════════════════╝")
 
 
-def discount(T_price):
+def discount(T_price):              # A function for giving 15% discount if the total price exceeded 700 EGP
     if T_price >= 700:
         Sale = T_price 
         Sale -= 0.15 * Sale
@@ -71,8 +71,8 @@ def discount(T_price):
         receipt(T_price)
 
       
-def cashier():
-    Total_Price = 0
+def cashier():                    # The main function and the one that calculates the prices of the items and assembles all the other functions
+    Total_Price = 0                
     print_delay("Welcome to our store !!")
     while True:
         print_delay("What would you like to buy, Sir ?")
