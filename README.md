@@ -3,9 +3,6 @@
 A terminal-based cashier system built in Python. Supports product selection, 
 quantity input, validation, discount calculation, and ASCII receipt generation.
 
-## Demo
-[Link to your video, or embed the GIF/screenshot]
-
 ## How to Run
 1. Clone this repo
 2. Run `python Register.py`
